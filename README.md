@@ -10,5 +10,5 @@ Using a shared volume this information can be shared with all containers that ru
 #### Example
 
 ```
-docker run --name='pullSecretsTets' --rm -it -e "SECRETS_S3_REMOTE_PATH=bucket/dir/filename.txt" -e "SECRETS_LOCAL_PATH=/data/tmp/filename.txt" -e "S3_REGION=us-west-2"
+docker run -e "SECRETS_S3_REMOTE_PATH=alive-secrets/smoketest/secret.txt" -e "SECRETS_LOCAL_PATH=/home/core/secret.txt" -e "S3_REGION=us-west-2" --name='pullSecretsTets' --rm -it jcenzano/awsclidocker
 ```
